@@ -126,7 +126,7 @@ class KakaoTV {
      */
     public async extract(...qualities: number[]): Promise<ExtractedVideos> {
         const result: any = {};
-        const promises = qualities.map(async (element: number) => {
+        const promises: Promise<void>[] = qualities.map(async (element: number) => {
             await this._extract(element).then(r => result[`${element}p`] = r);
         });
         await Promise.all(promises);
