@@ -81,7 +81,7 @@ class KakaoTV {
                 'User-Agent': `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${this.appVersion} Safari/537.36`
             }
         } as AxiosRequestConfig);
-        return response.data.videoLocation.url;
+        return response.data.tid;
     }
 
     /**
