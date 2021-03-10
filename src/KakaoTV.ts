@@ -77,7 +77,7 @@ class KakaoTV {
             headers: {
                 'Accept': '*/*',
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'Referer': this.getEmbededURL(`https://tv.kakao.com/v/${this.videoId}`),
+                'Referer': await this.getEmbededURL(`https://tv.kakao.com/v/${this.videoId}`),
                 'User-Agent': `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${this.appVersion} Safari/537.36`
             }
         } as AxiosRequestConfig);
@@ -109,7 +109,7 @@ class KakaoTV {
             },
             headers: {
                 'Accept': '*/*',
-                'Referer': this.getEmbededURL(`https://tv.kakao.com/v/${this.videoId}`),
+                'Referer': await this.getEmbededURL(`https://tv.kakao.com/v/${this.videoId}`),
                 'User-Agent': `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${this.appVersion} Safari/537.36`
             }
         } as AxiosRequestConfig);
